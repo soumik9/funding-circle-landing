@@ -20,7 +20,7 @@ const Footer = () => {
                             <ul className='flex flex-col gap-[.75rem]'>
                                 {section.links.map((link, index) => (
                                     <li key={index}>
-                                        <Link href={link.href}>{link.text}</Link>
+                                        <Link href={link.href} className='text-gray-secondary'>{link.text}</Link>
                                     </li>
                                 ))}
                             </ul>
@@ -39,8 +39,8 @@ const Footer = () => {
 
             <div className='border-t border-gray my-[1.5rem]'></div>
 
-            <div className='flex justify-between mb-[2rem]'>
-                <ul className='flex flex-wrap gap-x-[2rem]'>
+            <div className='flex justify-between mb-[2rem] gap-x-[.3rem]'>
+                <ul className='flex flex-wrap gap-x-[2rem] gap-y-[1rem]'>
                     {footerLinks.map((link, index) => (
                         <li key={index}>
                             <Link href="#" className='text-gray-secondary text-sm'>{link.text}</Link>

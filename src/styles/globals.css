@@ -13,3 +13,16 @@
 .trans {
   @apply transition ease-in-out duration-300;
 }
+
+/* flag css */
+.st0 {
+  fill: #B22234;
+}
+
+.st1 {
+  fill: #FFFFFF;
+}
+
+.st2 {
+  fill: #3C3B6E;
+}

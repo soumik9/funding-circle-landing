@@ -1,17 +1,17 @@
-import Image from 'next/image';
 import React from 'react';
+import FlagSvg from '../svgs/FlagSvg';
 
 const MiniHeader = () => {
     return (
-        <div className='h-[43px] bg-dark px-[1.5rem] font-sm text-white flex items-center justify-end'>
-            <div className='flex gap-[2rem]'>
+        <div className='h-[43px] bg-dark px-[1.5rem] text-sm text-white flex items-center'>
+            <div className='flex lg:gap-[2rem] flex-grow justify-between lg:justify-end'>
                 <div className='flex gap-[.5rem]'>
-                    <Image src="/usa.svg" width={23} height={19} alt="flag" />
-                    <small>United States</small>
+                    <FlagSvg />
+                    <p className='hidden lg:block '>United States</p>
                 </div>
 
-                <a href='tel:+18553855356'>(855) 385-5356</a>
-                <small>Manage my loan/application</small>
+                <div><a href='tel:+18553855356'>(855) 385-5356</a></div>
+                <p>Manage my loan/application</p>
             </div>
         </div>
     );
