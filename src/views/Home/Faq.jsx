@@ -19,7 +19,7 @@ const Faq = () => {
                     <h4 className='title-cmn'>FAQS</h4>
                     <h2 className='heading3 my-3 lg:my-4'>Questions? Answers.</h2>
 
-                    <div className='bg-[#f7f8fe] p-[2rem]'>
+                    <div className='bg-[#f7f8fe] p-[2rem] rounded-[.75rem]'>
                         <p className='title5'>If you’ve got questions, we can help.</p>
                         <p className='leading-[24px] mb-[1rem]'>Call in and talk to a US-based, real person on our customer <br /> service team.</p>
 

@@ -3,6 +3,7 @@ import MiniHeader from "@/components/shared/MiniHeader";
 import Faq from "@/views/Home/Faq";
 import Finding from "@/views/Home/Finding";
 import Offer from "@/views/Home/Offer";
+import Sponsers from "@/views/Home/Sponsers";
 import WhoWeAre from "@/views/Home/WhoWeAre";
 import WhyChooseUs from "@/views/Home/WhyChooseUs";
 
@@ -17,6 +18,7 @@ export default function Home() {
       <WhoWeAre />
       <Faq />
       <Finding />
+      <Sponsers />
       <Footer />
     </>
   );
