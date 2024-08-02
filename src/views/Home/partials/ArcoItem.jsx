@@ -17,7 +17,7 @@ const ArcoItem = ({ title, children, id, open, setOpen }) => {
             </div>
 
             <Collapse isOpened={isOpen}>
-                <div className={`mt-[1rem] transition-all duration-500 ease-in-out ${isOpen ? 'open' : 'close'}`}>
+                <div className={`mt-[1rem] ${isOpen ? 'open animate-slideDown' : 'close animate-slideUp'}`}>
                     {children}
                 </div>
             </Collapse>

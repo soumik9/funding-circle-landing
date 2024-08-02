@@ -130,3 +130,104 @@ export const faqDatas = [
         ),
     },
 ];
+
+export const navbarData = [
+    {
+        id: 1,
+        title: 'Manage my loan',
+        path: '#',
+        subItems: []
+    },
+    {
+        id: 2,
+        title: 'Sign into my application',
+        path: '#',
+        subItems: []
+    },
+    {
+        id: 3,
+        title: 'Partners',
+        path: '#',
+        subItems: [
+            {
+                id: 1,
+                title: 'Partner program',
+                path: '#',
+            },
+            {
+                id: 2,
+                title: 'Merchant Portal',
+                path: '#',
+            },
+            {
+                id: 3,
+                title: 'Lending as a service',
+                path: '#',
+            },
+            {
+                id: 4,
+                title: 'Affiliate program',
+                path: '#',
+            },
+        ]
+    },
+    {
+        id: 4,
+        title: 'About us',
+        path: '#',
+        subItems: [
+            {
+                id: 1,
+                title: 'Company',
+                path: '#',
+            },
+            {
+                id: 2,
+                title: 'Careers',
+                path: '#',
+            },
+            {
+                id: 3,
+                title: 'Contact us',
+                path: '#',
+            },
+            {
+                id: 4,
+                title: 'Newsroom',
+                path: '#',
+            },
+        ]
+    },
+    {
+        id: 5,
+        title: 'Resources',
+        path: '#',
+        subItems: [
+            {
+                id: 1,
+                title: 'Resource Center',
+                path: '#',
+            },
+            {
+                id: 2,
+                title: 'PPP forgiveness',
+                path: '#',
+            },
+            {
+                id: 3,
+                title: 'FAQs',
+                path: '#',
+            },
+            {
+                id: 4,
+                title: 'Customer success stories',
+                path: '#',
+            },
+            {
+                id: 5,
+                title: 'SBA Loan Guide',
+                path: '#',
+            },
+        ]
+    },
+]
