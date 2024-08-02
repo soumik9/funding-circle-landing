@@ -7,7 +7,7 @@ const WhoWeAre = () => {
     return (
         <div className='bg-[#f9f1fa9c]'>
             <div className='container lg:flex lg:flex-col lg:items-center'>
-                <div className='lg:pb-[8rem] pb-[4rem] text-center w-full lg:max-w-[80%] xl:max-w-[75%] '>
+                <div className='lg:pb-[8rem] pb-[4rem] text-center w-full lg:max-w-[80%] xl:max-w-[75%]'>
                     <h4 className='title-cmn'>Who We Are</h4>
                     <h2 className="text-[26px] lg:text-[60px] tracking-[-1.02px] text-center mt-3 md:mt-4 leading-[30px] lg:leading-[70px] font-bold text-dark mb-3 lg:mb-4">$21,000,000,000+ <br /> funded</h2>
                     <TrustPilotCmn divCss='justify-center items-center' />
@@ -27,7 +27,6 @@ const WhoWeAre = () => {
                 </div>
             </div>
         </div>
-
     );
 };
 

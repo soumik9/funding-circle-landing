@@ -18,6 +18,14 @@
   @apply flex justify-center items-start;
 }
 
+.heading3 {
+  @apply text-[40px] tracking-[-.68px] leading-[53px] font-bold text-[#262838];
+}
+
+.title5 {
+  @apply text-[16px] font-[600] leading-[25px]
+}
+
 .trans {
   @apply transition ease-in-out duration-300;
 }
@@ -48,4 +56,57 @@
   background-position: 0 0;
   background-size: 100% 200%;
   color: transparent;
+}
+
+.btn.btn-cta.btn-cta-secondary {
+  box-shadow: inset 0 0 0 1px #8f448a;
+  color: #262838;
+}
+
+.btn-cta {
+  align-items: center;
+  border: none;
+  border-radius: 12px;
+  display: inline-flex;
+  justify-content: center;
+  line-height: 19px;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  -webkit-user-select: none;
+  user-select: none;
+  border: 1px solid #8f448a;
+}
+
+@keyframes openAnimation {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+
+  to {
+    max-height: 500px;
+    /* Adjust as needed */
+    opacity: 1;
+  }
+}
+
+@keyframes closeAnimation {
+  from {
+    max-height: 500px;
+    /* Adjust as needed */
+    opacity: 1;
+  }
+
+  to {
+    max-height: 0;
+    opacity: 0;
+  }
+}
+
+.open {
+  animation: openAnimation 0.5s forwards;
+}
+
+.close {
+  animation: closeAnimation 0.5s forwards;
 }
