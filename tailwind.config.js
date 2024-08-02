@@ -9,8 +9,9 @@ module.exports = {
     extend: {
       colors: {
         primary: '#8f448a',
-        "dark-primary": '#262838',
-        "gray-primary": '#737480',
+        "dark": '#262838',
+        "gray": '#737480',
+        "gray-secondary": '#c9cbd9',
       },
       fontFamily: {
         // primary: ['Roboto', 'sans-serif'],

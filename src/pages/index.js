@@ -1,8 +1,13 @@
+import Footer from "@/components/shared/Footer";
+import MiniHeader from "@/components/shared/MiniHeader";
 
 export default function Home() {
   return (
-    <main>
-
-    </main>
+    <>
+      <header>
+        <MiniHeader />
+      </header>
+      <Footer />
+    </>
   );
 }
