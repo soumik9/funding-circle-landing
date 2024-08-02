@@ -3,7 +3,15 @@
 @tailwind utilities;
 
 .container {
-  @apply 3xl:px-[375px] lg:px-[80px] md:px-[40px] px-[20px] mx-auto max-w-full;
+  @apply 3xl:px-[290px] lg:px-[50px] md:px-[40px] px-[20px] mx-auto max-w-full;
+}
+
+.section-cmn {
+  @apply lg:p-[8rem] py-[4rem] px-4
+}
+
+.title-cmn {
+  @apply text-primary-600 tracking-[.52px] uppercase font-[600] text-sm;
 }
 
 .f-center {
@@ -25,4 +33,19 @@
 
 .st2 {
   fill: #3C3B6E;
+}
+
+.offterAnimateColor {
+  animation-delay: .25s;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-name: drip-color;
+  animation-timing-function: ease-in;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(to bottom, var(--Functional-Slate-700) 50%, var(--Brand-Purple-500-brand-purple) 50%);
+  background-position: 0 0;
+  background-size: 100% 200%;
+  color: transparent;
 }

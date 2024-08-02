@@ -1,5 +1,6 @@
 import Footer from "@/components/shared/Footer";
 import MiniHeader from "@/components/shared/MiniHeader";
+import Offer from "@/views/Home/Offer";
 
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
       <header>
         <MiniHeader />
       </header>
+      <Offer />
       <Footer />
     </>
   );
