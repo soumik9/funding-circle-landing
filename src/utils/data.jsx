@@ -65,3 +65,26 @@ export const chooseCardData = [
         description: 'Transparent monthly payments and a fixed interest rate mean you can plan on consistent payments each month.',
     },
 ];
+
+export const whoWeAreStatsData = [
+    {
+        title: 'More than 143,000 loans',
+        titleClass: 'text-primary',
+        description: 'We’ve helped small businesses in the US and UK by funding 143,000+ loans.',
+    },
+    {
+        title: '90%+ referral rate',
+        titleClass: 'text-[#34b576]',
+        description: 'Over 90% of US borrowers say they’d refer us to a friend.',
+    },
+    {
+        title: '24%+ business growth',
+        titleClass: 'text-[#009bde]',
+        description: 'US borrowers who grew were up an average of 24%+ after getting their loan.',
+    },
+    {
+        imageSrc: '/us-fin.avif',
+        imageAlt: 'us-unif',
+        description: 'Funding Circle was awarded for leading the financial technology sector in small business lending.',
+    },
+];

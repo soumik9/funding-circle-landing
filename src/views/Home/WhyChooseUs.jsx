@@ -1,7 +1,6 @@
-import TrustPilotGreenSvg from '@/components/svgs/TrustPilotGreenSvg';
 import { chooseCardData } from '@/utils/data';
-import Image from 'next/image';
 import React from 'react';
+import TrustPilotCmn from './partials/TrustPilotCmn';
 
 const WhyChooseUs = () => {
     return (
@@ -16,23 +15,7 @@ const WhyChooseUs = () => {
                     </div>
 
                     <div className='lg:w-4/12 flex lg:justify-end items-center mt-[3rem] lg:mt-0'>
-                        <div className='flex flex-col gap-2 '>
-                            <div className='w-[126px]'>
-                                <TrustPilotGreenSvg />
-                            </div>
-                            <div className='flex gap-[2px]'>
-                                <Image src='/star.svg' width={251} height={46} alt='star' className='h-[46px] w-[36px]' />
-                                <Image src='/star.svg' width={251} height={46} alt='star' className='h-[46px] w-[36px]' />
-                                <Image src='/star.svg' width={251} height={46} alt='star' className='h-[46px] w-[36px]' />
-                                <Image src='/star.svg' width={251} height={46} alt='star' className='h-[46px] w-[36px]' />
-                                <Image src='/star-half.svg' width={251} height={46} alt='star' className='h-[46px] w-[36px]' />
-                            </div>
-                            <p>
-                                <span>TrustScore <strong>4.6</strong></span>
-                                <span><strong>15,081</strong> <span>reviews</span></span>
-                            </p>
-                        </div>
-
+                        <TrustPilotCmn />
                     </div>
                 </div>
 

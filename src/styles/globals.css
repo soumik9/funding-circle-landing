@@ -7,7 +7,7 @@
 }
 
 .section-cmn {
-  @apply lg:p-[8rem] py-[4rem] px-4
+  @apply lg:py-[8rem] py-[4rem]
 }
 
 .title-cmn {
