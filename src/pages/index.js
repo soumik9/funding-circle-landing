@@ -1,6 +1,7 @@
 import Footer from "@/components/shared/Footer";
 import MiniHeader from "@/components/shared/MiniHeader";
 import Offer from "@/views/Home/Offer";
+import WhyChooseUs from "@/views/Home/WhyChooseUs";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
         <MiniHeader />
       </header>
       <Offer />
+      <WhyChooseUs />
       <Footer />
     </>
   );
