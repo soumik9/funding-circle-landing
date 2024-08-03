@@ -2,6 +2,11 @@ import ChooseFour from "@/components/svgs/ChooseFour";
 import ChooseOne from "@/components/svgs/ChooseOne";
 import ChooseThree from "@/components/svgs/ChooseThree";
 import ChooseTwo from "@/components/svgs/ChooseTwo";
+import SliderFive from "@/components/svgs/SliderFive";
+import SliderFour from "@/components/svgs/SliderFour";
+import SliderOne from "@/components/svgs/SliderOne";
+import SliderThree from "@/components/svgs/SliderThree";
+import SliderTwo from "@/components/svgs/SliderTwo";
 import WorkOneSvg from "@/components/svgs/WorkOneSvg";
 import WorkThreeSvg from "@/components/svgs/WorkThreeSvg";
 import WorkTwoSvg from "@/components/svgs/WorkTwoSvg";
@@ -256,3 +261,51 @@ export const howItWorksdatas = [
     },
     // Add more items as needed
 ];
+
+export const wiSliderDatas = [
+    {
+        img: '/s1.webp',
+        title: 'Grow Your Business',
+        text: '“All I heard from banks was ‘no, no, no.’ Funding Circle’s approach is so different than a traditional bank’s — and that’s what attracted me.”',
+        name: 'Gabriela & Fergus Hernandez',
+        company: 'Besame Cosmetics',
+        SliderIcon: <SliderOne />,
+        bgColor: 'bg-dark', textColor: 'text-[#e8c9eb]'
+    },
+    {
+        img: '/s2.webp',
+        title: 'Invest in Marketing',
+        text: '“It was a very simple process. I feel blessed that I decided to call Funding Circle.”',
+        name: 'Willie Powells',
+        company: 'The Law Offices of Willie D. Powells III and Associates, PLLC',
+        SliderIcon: <SliderTwo />,
+        bgColor: 'bg-primary', textColor: 'text-[#e8c9eb]'
+    },
+    {
+        img: '/s3.webp',
+        title: 'Purchase Inventory',
+        text: '“By buying inventory before prices increased, we estimate that loan from Funding Circle saved us $20,000 – $30,000 … even with the interest we paid on the loan.”',
+        name: 'Peter Koshland',
+        company: 'Koshland Pharm',
+        SliderIcon: <SliderThree />,
+        bgColor: 'bg-dark', textColor: 'text-[#e8c9eb]'
+    },
+    {
+        img: '/s4.webp',
+        title: 'Working Capital',
+        text: '“I recommend Funding Circle because they really get small business. The whole process is a lot smoother, faster, and more personalized than what you’d get from a bank.””',
+        name: 'Viola Sutanto',
+        company: 'Maika Goodss',
+        SliderIcon: <SliderFour />,
+        bgColor: 'bg-primary', textColor: 'text-[#e8c9eb]'
+    },
+    {
+        img: '/s5.webp',
+        title: 'Restructure Debt',
+        text: '“All I heard from banks was ‘no, no, no.’ Funding Circle’s approach is so different than a traditional bank’s — and that’s what attracted me.”',
+        name: 'Ronald Schott',
+        company: 'Ace Media Productions',
+        SliderIcon: <SliderFive />,
+        bgColor: 'bg-[#e8c9eb]', textColor: 'text-dark'
+    }
+]

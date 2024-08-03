@@ -2,8 +2,6 @@ import React from 'react';
 import Image from 'next/image';
 import Spon5 from '@/components/svgs/Spon5';
 import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 const Sponsers = () => {
 

@@ -44,6 +44,14 @@
   line-height: 42px;
 }
 
+.title1 {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .52px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
 .body5 {
   font-size: 13px;
   line-height: 19px;
@@ -58,6 +66,11 @@
   font-size: 19px;
   letter-spacing: -.114px;
   line-height: 28px;
+}
+
+.body1 {
+  font-size: 28px;
+  line-height: 36px;
 }
 
 .trans {
