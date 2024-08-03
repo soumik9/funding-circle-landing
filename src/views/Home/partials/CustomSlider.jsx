@@ -1,5 +1,5 @@
 import { Slider } from '@mui/material';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { styled } from '@mui/material/styles';
 
 const WhiteBackgroundSlider = styled(Slider)({
