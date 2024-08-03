@@ -71,7 +71,7 @@ const HowItWorks = () => {
                     </div>
 
                     {currentItem && (
-                        <div key={currentItem.id} className='bg-[#f7f8fe] py-[2.5rem] lg:py-[3rem] px-[1.5rem] lg:px-[2.5rem] flex flex-col gap-[1.5rem] w-full lg:w-[412px] lg:min-h-[413px] step-item'>
+                        <div key={currentItem.id} className='bg-[#f7f8fe] py-[2.5rem] lg:py-[3rem] px-[1.5rem] lg:px-[2.5rem] flex flex-col gap-[1.5rem] w-full lg:w-[412px] lg:min-h-[413px] step-item rounded-[.75rem]'>
                             {currentItem.icon}
                             <div>
                                 <h4 className='title3 font-[500] mb-3 text-dark'>{currentItem.title}</h4>

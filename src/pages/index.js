@@ -4,6 +4,7 @@ import Navbar from "@/components/shared/Navbar";
 import Estimate from "@/views/Home/Estimate";
 import Faq from "@/views/Home/Faq";
 import Finding from "@/views/Home/Finding";
+import Hero from "@/views/Home/Hero";
 import HowItWorks from "@/views/Home/HowItWorks";
 import HowWeHelp from "@/views/Home/HowWeHelp";
 import Offer from "@/views/Home/Offer";
@@ -18,6 +19,7 @@ export default function Home() {
         <MiniHeader />
         <Navbar />
       </header>
+      <Hero />
       <Offer />
       <WhyChooseUs />
       <Estimate />
