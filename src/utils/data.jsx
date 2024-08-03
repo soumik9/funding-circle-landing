@@ -2,6 +2,9 @@ import ChooseFour from "@/components/svgs/ChooseFour";
 import ChooseOne from "@/components/svgs/ChooseOne";
 import ChooseThree from "@/components/svgs/ChooseThree";
 import ChooseTwo from "@/components/svgs/ChooseTwo";
+import WorkOneSvg from "@/components/svgs/WorkOneSvg";
+import WorkThreeSvg from "@/components/svgs/WorkThreeSvg";
+import WorkTwoSvg from "@/components/svgs/WorkTwoSvg";
 
 export const footerLinks = [
     { href: "#", text: "Privacy Policy" },
@@ -231,3 +234,25 @@ export const navbarData = [
         ]
     },
 ]
+
+export const howItWorksdatas = [
+    {
+        id: 1,
+        icon: <WorkOneSvg />,
+        title: 'Take 6 minutes to apply.',
+        description: 'Fill out the simple online application. It’s quick and easy to get started.'
+    },
+    {
+        id: 2,
+        icon: <WorkTwoSvg />,
+        title: 'Get your loan approved fast.',
+        description: 'Approvals in as fast as 24 hours<sup>1</sup> with no impact on your credit score.'
+    },
+    {
+        id: 3,
+        icon: <WorkThreeSvg />,
+        title: 'Get funded.',
+        description: 'Get the cash your business needs in as fast as 2 business days. <sup>1</sup>'
+    },
+    // Add more items as needed
+];

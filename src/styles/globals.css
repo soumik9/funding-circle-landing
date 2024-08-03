@@ -19,11 +19,29 @@
 }
 
 .heading3 {
-  @apply text-[40px] tracking-[-.68px] leading-[53px] font-bold text-[#262838];
+  @apply xl:text-[40px] text-[26px] tracking-[-.68px] leading-[30px] xl:leading-[53px] font-bold text-[#262838];
 }
 
 .title5 {
   @apply text-[16px] font-[600] leading-[25px]
+}
+
+.title4 {
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 22px;
+}
+
+.title3 {
+  font-size: 34px;
+  letter-spacing: -.34px;
+  line-height: 42px;
+}
+
+.body3 {
+  font-size: 19px;
+  letter-spacing: -.114px;
+  line-height: 28px;
 }
 
 .trans {
@@ -91,6 +109,50 @@
   height: 100px !important;
 }
 
+.help {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.slick-slide-help {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 1rem !important;
+  height: 500px !important;
+}
+
+/* /* .image-container {
+
+width: 374px !important;
+height: 406px !important;
+} */
+
+.slick-dots {
+  margin-top: 1rem !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.slick-dots li {
+  margin: 0 6px !important;
+}
+
+.slick-dots li button:before {
+  font-size: 0 !important;
+  content: '' !important;
+  display: block !important;
+  height: 2px !important;
+  width: 24px !important;
+  background-color: #c9cbd9 !important;
+  border-radius: 2px !important;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #8f448a !important;
+  background-color: #8f448a !important;
+}
+
 @keyframes slideDown {
   0% {
     opacity: 0;
@@ -121,4 +183,8 @@
 
 .animate-slideUp {
   animation: slideUp 0.3s ease-out forwards;
+}
+
+.step-item {
+  transition: all 0.5s ease;
 }

@@ -9,10 +9,8 @@ import { faqDatas } from '@/utils/data';
 const Faq = () => {
 
     const [open, setOpen] = useState(null);
-    console.log(open)
 
     return (
-        // <div className='bg-[#f9f1fa9c]'>
         <div className='container section-cmn'>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-20'>
                 <div>

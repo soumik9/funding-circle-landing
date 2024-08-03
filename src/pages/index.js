@@ -3,6 +3,8 @@ import MiniHeader from "@/components/shared/MiniHeader";
 import Navbar from "@/components/shared/Navbar";
 import Faq from "@/views/Home/Faq";
 import Finding from "@/views/Home/Finding";
+import HowItWorks from "@/views/Home/HowItWorks";
+import HowWeHelp from "@/views/Home/HowWeHelp";
 import Offer from "@/views/Home/Offer";
 import Sponsers from "@/views/Home/Sponsers";
 import WhoWeAre from "@/views/Home/WhoWeAre";
@@ -17,6 +19,8 @@ export default function Home() {
       </header>
       <Offer />
       <WhyChooseUs />
+      <HowItWorks />
+      <HowWeHelp />
       <WhoWeAre />
       <Faq />
       <Finding />

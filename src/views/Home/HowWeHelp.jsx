@@ -1,14 +1,11 @@
-import React from 'react';
 import Image from 'next/image';
-import Spon5 from '@/components/svgs/Spon5';
+import React from 'react';
 import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
-const Sponsers = () => {
+const HowWeHelp = () => {
 
     const settings = {
-        dots: false,
+        dots: true,
         infinite: true,
         speed: 1500,
         slidesToShow: 5,
@@ -48,26 +45,22 @@ const Sponsers = () => {
     };
 
     return (
-        <div className='lg:pb-[8rem] pb-[4rem] pt-[2rem] sponser'>
+        <div className='section-cmn'>
+            <div className='mb-[4rem] text-center help'>
+                <h4 className='title-cmn'>How We Help</h4>
+                <h2 className='heading3 my-3 lg:my-4'>Real customers. Real impact.</h2>
+            </div>
+
             <Slider {...settings} className='slider-container'>
-                <div className="slick-slide">
-                    <Image src='/spon-1.webp' alt='spon-1' width={110} height={55} />
+                <div className='slick-slide-help'>
+                    <Image src='/s1.webp' alt='spon-1' width={374} height={406} className='w-[374px]' />
                 </div>
-                <div className="slick-slide">
-                    <Image src='/spon-2.webp' alt='spon-2' width={71} height={100} />
-                </div>
-                <div className="slick-slide">
-                    <Image src='/spon-3.webp' alt='spon-3' width={88} height={100} />
-                </div>
-                <div className="slick-slide">
-                    <Spon5 />
-                </div>
-                <div className="slick-slide">
-                    <Image src='/spon-6.webp' alt='spon-6' width={110} height={55} />
+                <div className='slick-slide-help'>
+                    <Image src='/s2.webp' alt='spon-2' width={374} height={406} className='w-[374px]' />
                 </div>
             </Slider>
         </div>
     );
 };
 
-export default Sponsers;
+export default HowWeHelp;
