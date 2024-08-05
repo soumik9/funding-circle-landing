@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import CustomSlider from './partials/CustomSlider'; // Import the reusable component
 import EstimateHead from './partials/EstimateHead';
 
@@ -7,6 +7,41 @@ const Estimate = () => {
 
     const [value, setValue] = useState(100000); // Default loan amount value
     const [duration, setDuration] = useState(2); // Default duration value
+    const [range, setRange] = useState('excellent');
+
+    const [total, setTotal] = useState(0);
+
+    useEffect(() => {
+        if (duration === 1) {
+            if (range === 'excellent') {
+                console.log(Number(value + ((value * 0.07) * 6)).toFixed(2))
+                setTotal(Number(value + ((value * 0.07) * 6)).toFixed(2)); // Adding 7% to the original value
+            } else if (range === 'very-good') {
+                setTotal(Number(value + ((value * 0.065) * 6)).toFixed(2)); // Adding 6.5% to the original value
+            } else if (range === 'good') {
+                setTotal(Number(value + ((value * 0.06) * 6)).toFixed(2)); // Adding 6% to the original value
+            } else if (range === 'fair') {
+                setTotal(Number(value + ((value * 0.055) * 6)).toFixed(2)); // Adding 5.5% to the original value
+            } else if (range === 'poor') {
+                setTotal(Number(value + ((value * 0.05) * 6)).toFixed(2)); // Adding 5% to the original value
+            }
+        }
+
+        if (duration > 1) {
+            if (range === 'excellent') {
+                setTotal(Number(value + ((value * 0.07) * (duration * 12))).toFixed(2)); // Adding 7% to the original value
+            } else if (range === 'very-good') {
+                setTotal(Number(value + ((value * 0.065) * (duration * 12))).toFixed(2)); // Adding 6.5% to the original value
+            } else if (range === 'good') {
+                setTotal(Number(value + ((value * 0.06) * (duration * 12))).toFixed(2)); // Adding 6% to the original value
+            } else if (range === 'fair') {
+                setTotal(Number(value + ((value * 0.055) * (duration * 12))).toFixed(2)); // Adding 5.5% to the original value
+            } else if (range === 'poor') {
+                setTotal(Number(value + ((value * 0.05) * (duration * 12))).toFixed(2)); // Adding 5% to the original value
+            }
+        }
+    }, [value, duration, range]);
+
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
@@ -14,6 +49,10 @@ const Estimate = () => {
 
     const handleChangeDuration = (event, newValue) => {
         setDuration(newValue);
+    };
+
+    const handleChangeSelect = (event) => {
+        setRange(event.target.value);
     };
 
     return (
@@ -63,18 +102,22 @@ const Estimate = () => {
 
                         <div>
                             <p className='body3 mb-[.5rem]'>Your estimated credit health:</p>
-                            <select className='text-dark w-full py-2 rounded-[.5rem] border-none outline-none px-2'>
-                                <option value="">Excellent</option>
-                                <option value="">Very Good</option>
-                                <option value="">Good</option>
-                                <option value="">Fair</option>
-                                <option value="">Poor</option>
+                            <select
+                                className='text-dark w-full py-2 rounded-[.5rem] border-none outline-none px-2'
+                                value={range}
+                                onChange={handleChangeSelect}
+                            >
+                                <option value="excellent">Excellent</option>
+                                <option value="very-good">Very Good</option>
+                                <option value="good">Good</option>
+                                <option value="fair">Fair</option>
+                                <option value="poor">Poor</option>
                             </select>
                         </div>
                     </div>
-                    <div className='bg-dark text-white flex flex-col justify-center p-[2rem] rounded-[.75rem] xl:w-[340px] xl:absolute xl:top-[63%] xl:right-0'>
+                    <div className='bg-dark text-white flex flex-col justify-center p-[1.5rem] rounded-[.75rem] xl:w-[440px] xl:absolute xl:top-[63%] xl:right-0'>
                         <p className='body4 text-[#e8c9eb]'>Your estimated monthly payment</p>
-                        <p className='text-[70px]  leading-[82px]'>$1,000</p>
+                        <p className='text-[70px]  leading-[82px]'> {`$${total.toLocaleString()}`}</p>
                         <button className='btn btn-cta bg-primary text-white w-max my-3'>Apply now</button>
                         <p className='text-[#9396a7]'>*This estimate does not include origination fee. Calculations are intended as a guide only and you may be offered different terms.</p>
                     </div>
