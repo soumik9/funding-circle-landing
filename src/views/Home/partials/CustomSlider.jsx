@@ -16,7 +16,7 @@ const WhiteBackgroundSlider = styled(Slider)({
     },
 });
 
-const CustomSlider = ({ value, onChange, min, max, unit }) => {
+const CustomSlider = ({ value, onChange, min, max, unit, ...props }) => {
     const valueDisplayRef = useRef(null);
 
     useEffect(() => {
@@ -50,6 +50,7 @@ const CustomSlider = ({ value, onChange, min, max, unit }) => {
                 valueLabelDisplay="off"
                 min={min}
                 max={max}
+                {...props}
             />
             <div
                 ref={valueDisplayRef}

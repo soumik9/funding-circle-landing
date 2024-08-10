@@ -5,46 +5,65 @@ import EstimateHead from './partials/EstimateHead';
 
 const Estimate = () => {
 
-    const [value, setValue] = useState(100000); // Default loan amount value
+    const [value, setValue] = useState(1000000); // Default loan amount value
     const [duration, setDuration] = useState(2); // Default duration value
     const [range, setRange] = useState('excellent');
 
     const [total, setTotal] = useState(0);
 
+    const calculateTotal = (interest, p, n) => {
+        const r = (interest / 12);
+        const total = (p / n) + (p * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, (n - 1)));
+        return total.toFixed(2);
+    }
+
     useEffect(() => {
         if (duration === 1) {
             if (range === 'excellent') {
-                console.log(Number(value + ((value * 0.07) * 6)).toFixed(2))
-                setTotal(Number(value + ((value * 0.07) * 6)).toFixed(2)); // Adding 7% to the original value
+                const total = calculateTotal(0.17, value, 6);
+                setTotal(total);
             } else if (range === 'very-good') {
-                setTotal(Number(value + ((value * 0.065) * 6)).toFixed(2)); // Adding 6.5% to the original value
+                const total = calculateTotal(0.19, value, 6);
+                setTotal(total);
             } else if (range === 'good') {
-                setTotal(Number(value + ((value * 0.06) * 6)).toFixed(2)); // Adding 6% to the original value
+                const total = calculateTotal(0.21, value, 6);
+                setTotal(total);
             } else if (range === 'fair') {
-                setTotal(Number(value + ((value * 0.055) * 6)).toFixed(2)); // Adding 5.5% to the original value
+                const total = calculateTotal(0.23, value, 6);
+                setTotal(total);
             } else if (range === 'poor') {
-                setTotal(Number(value + ((value * 0.05) * 6)).toFixed(2)); // Adding 5% to the original value
+                const total = calculateTotal(0.25, value, 6);
+                setTotal(total);
             }
         }
 
         if (duration > 1) {
             if (range === 'excellent') {
-                setTotal(Number(value + ((value * 0.07) * (duration * 12))).toFixed(2)); // Adding 7% to the original value
+                const total = calculateTotal(0.17, value, ((duration - 1) * 12));
+                setTotal(total);
             } else if (range === 'very-good') {
-                setTotal(Number(value + ((value * 0.065) * (duration * 12))).toFixed(2)); // Adding 6.5% to the original value
+                const total = calculateTotal(0.19, value, ((duration - 1) * 12));
+                setTotal(total);
             } else if (range === 'good') {
-                setTotal(Number(value + ((value * 0.06) * (duration * 12))).toFixed(2)); // Adding 6% to the original value
+                const total = calculateTotal(0.21, value, ((duration - 1) * 12));
+                setTotal(total);
             } else if (range === 'fair') {
-                setTotal(Number(value + ((value * 0.055) * (duration * 12))).toFixed(2)); // Adding 5.5% to the original value
+                const total = calculateTotal(0.23, value, ((duration - 1) * 12));
+                setTotal(total);
             } else if (range === 'poor') {
-                setTotal(Number(value + ((value * 0.05) * (duration * 12))).toFixed(2)); // Adding 5% to the original value
+                const total = calculateTotal(0.25, value, ((duration - 1) * 12));
+                setTotal(total);
             }
         }
     }, [value, duration, range]);
 
-
     const handleChange = (event, newValue) => {
-        setValue(newValue);
+        if (newValue <= 500000) {
+            setValue(newValue <= 100000 ? 100000 : 500000);  // Ensure it decreases to 100,000 or moves to 500,000
+        } else {
+            const stepsFrom500K = Math.round((newValue - 500000) / 500000) * 500000 + 500000;
+            setValue(stepsFrom500K);
+        }
     };
 
     const handleChangeDuration = (event, newValue) => {
@@ -77,13 +96,14 @@ const Estimate = () => {
                         <div>
                             <p className='body3 mb-[.5rem]'>Loan amount:</p>
                             <p className='flex justify-between body5 text-[#e8c9eb]'>
-                                <span>$25K</span><span>$500K</span>
+                                <span suppressHydrationWarning>100000</span><span>5M</span>
                             </p>
                             <CustomSlider
                                 value={value}
                                 onChange={handleChange}
-                                min={25000}
-                                max={500000}
+                                min={100000}
+                                max={5000000}
+                                step={500000}
                             />
                         </div>
                         <div>
